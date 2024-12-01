@@ -1,0 +1,18 @@
+services:
+
+  wpp_bot:
+    image: devlikeapro/waha:latest
+    container_name: wpp_bot
+    restart: always
+
+    ports:
+      - '3000:3000'
+
+  api_chat:
+    build:
+      context: .
+      dockerfile: dockerfile.api_chat
+    container_name: api_chat
+    ports:
+      - '5000:5000'
+
