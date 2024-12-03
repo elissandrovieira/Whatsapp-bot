@@ -2,7 +2,7 @@ services:
 
   wpp:
     image: devlikeapro/waha:latest
-    container_name: wpp
+    container_name: wpp_bot
     restart: always
 
     ports:
@@ -12,7 +12,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.api
-    container_name: api
+    container_name: wpp__api
     ports:
       - '5000:5000'
     volumes:

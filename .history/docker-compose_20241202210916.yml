@@ -1,5 +1,10 @@
 services:
 
+
+
+
+services:
+
   wpp:
     image: devlikeapro/waha:latest
     container_name: wpp
@@ -11,10 +16,10 @@ services:
   api:
     build:
       context: .
-      dockerfile: Dockerfile.api
+      dockerfile: dockerfile.api_chat
     container_name: api
     ports:
       - '5000:5000'
-    volumes:
+  volumes:
       - .:/app
       - ./chroma_data:/app/chroma_data
